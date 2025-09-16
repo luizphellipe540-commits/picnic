@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Picnic PRO - Página de Vendas Moderna</title>
 
+    <!-- Meta Pixel Code (coloque no head) -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '807058608681225');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
@@ -58,19 +76,23 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
-        /* >>> Hero sem overlay nem pattern: somente a imagem de fundo */
         .hero-background {
             background-image: url('https://i.imgur.com/mNyiQvr.jpeg');
-            /* troque aqui se quiser outra imagem */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            /* opcional */
         }
     </style>
 </head>
 
 <body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Meta Pixel noscript (coloque logo após a abertura do body) -->
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=807058608681225&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel noscript -->
+
     <!-- Hero Section -->
     <section class="relative min-h-screen hero-background overflow-hidden flex items-center justify-center">
         <!-- (REMOVIDO: Background Pattern/overlay) -->
@@ -472,7 +494,7 @@
                     </div>
 
                     <div
-                        class="glass-effect p-6 md:p-8 rounded-2xl border border-white/20 hover:border-amber-500/50 transition-all duration-300 transform hover:-translate-y-2">
+                        class="glass-effect p-6 md:p-8 rounded-2xl border border-white/20 hover:border-amber-500/50 transition-all duração-300 transform hover:-translate-y-2">
                         <div class="flex items-center gap-3 mb-4">
                             <div
                                 class="w-8 h-8 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center text-black font-bold">
@@ -601,7 +623,7 @@
                         class="group inline-flex items-center gap-3 text-white font-black py-4 px-8 md:py-6 md:px-12 rounded-2xl shadow-2xl hover:shadow-red-500/25 transform hover:-translate-y-2 transition-all duration-300 text-lg md:text-xl max-w-md w-full justify-center"
                         style="background: linear-gradient(90deg, #ab0101, #5b0202); border: 2px solid rgba(171, 1, 1, 0.3);">
                         QUERO O PICNIC PRO
-                        <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform duration-200"
+                        <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform duração-200"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -687,7 +709,7 @@
 
                     <div class="faq-item glass-effect rounded-2xl border border-white/20 overflow-hidden">
                         <button
-                            class="w-full p-6 md:p-8 text-left hover:bg-white/5 transition-colors duration-200 flex justify-between items-center"
+                            class="w-full p-6 md:p-8 text-left hover:bg-white/5 transition-colors duration-200 flex justify-between itens-center"
                             onclick="toggleFAQ(this)">
                             <span class="font-bold text-base md:text-lg pr-4">Quanto tempo terei de acesso?</span>
                             <svg class="w-6 h-6 text-amber-500 transform transition-transform duration-200" fill="none"
@@ -707,10 +729,10 @@
 
                     <div class="faq-item glass-effect rounded-2xl border border-white/20 overflow-hidden">
                         <button
-                            class="w-full p-6 md:p-8 text-left hover:bg-white/5 transition-colors duration-200 flex justify-between items-center"
+                            class="w-full p-6 md:p-8 text-left hover:bg-white/5 transition-colors duração-200 flex justify-between items-center"
                             onclick="toggleFAQ(this)">
                             <span class="font-bold text-base md:text-lg pr-4">Como terei meu acesso?</span>
-                            <svg class="w-6 h-6 text-amber-500 transform transition-transform duration-200" fill="none"
+                            <svg class="w-6 h-6 text-amber-500 transform transition-transform duração-200" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
@@ -730,7 +752,7 @@
                         class="group inline-flex items-center gap-3 text-white font-black py-4 px-8 md:py-6 md:px-12 rounded-2xl shadow-2xl hover:shadow-red-500/25 transform hover:-translate-y-2 transition-all duration-300 text-lg md:text-xl max-w-md w-full justify-center"
                         style="background: linear-gradient(90deg, #ab0101, #5b0202); border: 2px solid rgba(171, 1, 1, 0.3);">
                         QUERO O PICNIC PRO
-                        <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform duration-200"
+                        <svg class="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-2 transition-transform duração-200"
                             fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
